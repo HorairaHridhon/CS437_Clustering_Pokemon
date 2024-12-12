@@ -73,7 +73,7 @@ pip install pandas scikit-learn
 
 ## Sample Output
 
-The output will display the silhouette scores for different cluster counts and the clusters for each Pokémon type.
+The output will display the silhouette scores for different cluster counts and the clusters for each Pokemon type.
 
 ```
 Fire

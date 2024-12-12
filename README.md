@@ -1,21 +1,8 @@
-# Pokémon Clustering with K-Means
-
-## Table of Contents
-1. [Project Overview](#project-overview)
-2. [Dataset Description](#dataset-description)
-3. [Prerequisites](#prerequisites)
-4. [Installation Instructions](#installation-instructions)
-5. [Project Goals](#project-goals)
-6. [Code Explanation](#code-explanation)
-7. [How to Run the Code](#how-to-run-the-code)
-8. [Sample Output](#sample-output)
-9. [License](#license)
-
----
+# Pokemon Clustering with K-Means
 
 ## Project Overview
 
-This project applies **K-Means clustering** to categorize Pokémon based on their fighting statistics. For each primary Pokémon type (e.g., Fire, Water), the appropriate number of clusters is determined by maximizing the **Silhouette Coefficient** score. The project leverages a **MinMaxScaler** to ensure fair scaling of the stats, preventing any bias due to varying stat magnitudes.
+This project applies **K-Means clustering** to categorize Pokemon based on their fighting statistics. For each primary Pokemon type (e.g., Fire, Water), the appropriate number of clusters is determined by maximizing the **Silhouette Coefficient** score. The project uses a **MinMaxScaler** to ensure fair scaling of the stats, preventing any bias due to varying stat magnitudes.
 
 The clustering process helps in identifying groups of Pokémon with similar characteristics, making the insights applicable to real-world scenarios, such as team formation and game strategy development.
 
@@ -24,8 +11,8 @@ The clustering process helps in identifying groups of Pokémon with similar char
 ## Dataset Description
 
 The dataset used is `Pokemon.csv`, containing the following columns:
-- **Name**: Name of the Pokémon
-- **Type 1**: The primary type of the Pokémon (e.g., Fire, Water)
+- **Name**: Name of the Pokemon
+- **Type 1**: The primary type of the Pokemon (e.g., Fire, Water)
 - **HP**: Hit/health points (damage threshold before fainting)
 - **Attack**: Strength of physical attacks
 - **Defense**: Resistance to physical damage
@@ -41,13 +28,6 @@ The dataset used is `Pokemon.csv`, containing the following columns:
 
 ## Prerequisites
 
-Ensure you have the following dependencies installed:
-
-- Python 3.x
-- Libraries:
-  - `pandas`
-  - `scikit-learn`
-
 You can install the required libraries using the following command:
 
 ```bash
@@ -56,20 +36,6 @@ pip install pandas scikit-learn
 
 ---
 
-## Installation Instructions
-
-1. **Clone the repository**:
-
-   ```bash
-   git clone https://github.com/yourusername/pokemon-clustering.git
-   cd pokemon-clustering
-   ```
-
-2. **Place the dataset**:
-
-   Ensure the `Pokemon.csv` file is in the root directory of the project.
-
----
 
 ## Project Goals
 
@@ -104,20 +70,10 @@ pip install pandas scikit-learn
 
 ---
 
-## How to Run the Code
-
-1. Ensure `Pokemon.csv` is in the same directory as the script.
-2. Run the Python script:
-
-   ```bash
-   python clustering_pokemon.py
-   ```
-
-3. The output will display the silhouette scores for different cluster counts and the clusters for each Pokémon type.
-
----
 
 ## Sample Output
+
+The output will display the silhouette scores for different cluster counts and the clusters for each Pokémon type.
 
 ```
 Fire
@@ -138,6 +94,39 @@ Mean Defense: 67.5
 Mean Sp. Atk: 104.5
 Mean Sp. Def: 85.0
 Mean Speed: 96.5
+
+Cluster 1
+            Name   HP  Attack  Defense  Sp. Atk  Sp. Def  Speed
+23       Furret    78      84       78      109       85     100
+11       Bibarel   85      95       57      100       85      93
+Mean HP: 81.5
+Mean Attack: 89.5
+Mean Defense: 67.5
+Mean Sp. Atk: 104.5
+Mean Sp. Def: 85.0
+Mean Speed: 86.5
+
+Cluster 2
+            Name   HP  Attack  Defense  Sp. Atk  Sp. Def  Speed
+21      Ambipom   58      84       78      109       85     100
+15       Chatot   65      95       57      100       85      93
+Mean HP: 61.5
+Mean Attack: 89.5
+Mean Defense: 67.5
+Mean Sp. Atk: 104.5
+Mean Sp. Def: 85.0
+Mean Speed: 66.5
+
+Cluster 3
+            Name   HP  Attack  Defense  Sp. Atk  Sp. Def  Speed
+29     Sawsbyck    38      84       78      109       85     100
+17        Tyros    65      95       57      100       85      93
+Mean HP: 51.5
+Mean Attack: 89.5
+Mean Defense: 67.5
+Mean Sp. Atk: 104.5
+Mean Sp. Def: 85.0
+Mean Speed: 96.5
 ```
 
 ---
@@ -145,3 +134,8 @@ Mean Speed: 96.5
 ## License
 
 This project is licensed under the MIT License.
+
+
+## Acknowledgments
+- Dataset Source: [Kaggle Pokemon Dataset](https://www.kaggle.com/datasets/abcsds/pokemon)
+- Instructions provided by the course professor.
